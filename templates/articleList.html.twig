@@ -1,0 +1,8 @@
+{% block body %}
+	{% for article in articles %}
+			{{ article.title }}<br />
+			{{ article.content }}
+			<br />
+			<img src="{{ absolute_url(asset('images/logo.png')) }}" alt="Symfony!" />
+	{% endfor %}
+{% endblock %}

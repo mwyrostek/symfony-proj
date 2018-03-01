@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	{% block navigation %}
+		{{ render(controller('App\\Controller\\MenuController::menu')) }}
+	{% endblock %}	
+    <h1>Lista artykulow<h1>
+    {{ render(controller('App\\Controller\\ArticleController::articleList')) }}
+{% endblock %}
