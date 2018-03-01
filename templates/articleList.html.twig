@@ -1,8 +1,19 @@
 {% block body %}
+<div class="row">
 	{% for article in articles %}
-			{{ article.title }}<br />
-			{{ article.content }}
-			<br />
-			<img src="{{ absolute_url(asset('images/logo.png')) }}" alt="Symfony!" />
+	  <div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+		  <img src="{{article.images}}" alt="{{article.imagesAlt}}!" />
+		  <div class="caption">
+			<h3>{{ article.title }}</h3>
+			<p>{{ article.content }}</p>
+			<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		  </div>
+		</div>
+	  </div>
 	{% endfor %}
+	</div>
 {% endblock %}
+
+
+

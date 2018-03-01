@@ -1,8 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+<header>
 	{% block navigation %}
 		{{ render(controller('App\\Controller\\MenuController::menu')) }}
 	{% endblock %}	
-    <h1>Lista artykulow<h1>
-    {{ render(controller('App\\Controller\\ArticleController::articleList')) }}
+	{% block articleTop %}
+		{{ render(controller('App\\Controller\\ArticleController::articleToTop')) }}
+	{% endblock %}
+</header>	
+	{% block content %}
+		{{ render(controller('App\\Controller\\ArticleController::articleList')) }}
+	{% endblock %}	
 {% endblock %}
